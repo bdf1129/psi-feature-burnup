@@ -32,6 +32,7 @@ Ext.define('CustomApp', {
             featureCompleteByState  : false,
             featureCompleteState    : "",
             PreliminaryEstimate     : true,
+            PreliminaryEstimateProjection: true,
             StoryPoints             : true,
             StoryCount              : false,
             StoryPointsProjection   : true,
@@ -895,6 +896,7 @@ function pointsUnitType(type) {
 function createSeriesArray() {
     return [
         { name : "PreliminaryEstimate",      description : "Preliminary Estimate",  field : "CalcPreliminaryEstimate",    display : "line", f : "sum", color : "Orange" },
+        { name : "PreliminaryEstimateProjection",      description : "Preliminary Estimate Projection",  projectOn : "Preliminary Estimate", color : "Orange" },
         { name : "StoryPoints" ,             description : "Story Points",          field : "LeafStoryPlanEstimateTotal", display : "line", f : "sum", color : "DarkGray" },
         { name : "StoryCount"  ,             description : "Story Count" ,          field : "LeafStoryCount",             display : "line", f : "sum", color : "DarkGray" },
         { name : "StoryPointsProjection",    description : "Scope Projection",  projectOn : "Story Points", color : "DarkGray" },
